@@ -20,6 +20,7 @@ function onClick() {
 }
 
 function createBoxes(amount) {
+  destroyBoxes();
   const boxes = [];
   for (let i = 0; i < amount; i += 1) {
     const box = document.createElement("div");
@@ -32,6 +33,7 @@ function createBoxes(amount) {
   }
   boxesCollection.append(...boxes);
 }
+
 function destroyBoxes() {
   boxesCollection.innerHTML = "";
 }
